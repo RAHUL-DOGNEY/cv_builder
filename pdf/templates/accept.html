@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</head>
+<h1>CV Genrator</h1>
+<!-- Bootstrap Form Start -->
+<div class="container">
+<form method="POST" action="" >
+ {% csrf_token %}
+<legend>Fill-Form</legend>
+    <div class="form-row">
+    
+      <div class="form-group col-md-6">
+        <label for="">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="">Phone</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">E-mail</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="e-mail">
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="">School</label>
+      <input type="text" class="form-control" id="school" name="school" placeholder="School Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="">Skill</label>
+      <input type="text" class="form-control" id="skill" name="skill" placeholder="Ex :-python,java,c++,c ">
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="">Degree</label>
+        <input type="text" class="form-control" id="degree" name="degree" placeholder="Degree">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="">University</label>
+        <input type="text" class="form-control" id="university" name="university" placeholder="University">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="">About You</label>
+        <input type="text" class="form-control" id="about_you" name="about_you" placeholder="About You">
+      </div>
+    
+    <div class="form-group col-md-4">
+        <label for="">Previous Works</label>
+        <input type="text" class="form-control" id="previous_work" name="previous_work" placeholder="Previous Works">
+    </div> 
+</div> 
+ <button type="submit" class="btn btn-primary">Submit</button></a>
+ <div><a href="{% url 'list' %}" > View your resume </a></div>
+  </form>
+</div>
+<!-- Bootstrap Form End -->
+</body>
+</html>
